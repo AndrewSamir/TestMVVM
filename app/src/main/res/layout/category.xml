@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemCategoryViewModel"
+            type="com.example.testmvvm.adapters.categories.ItemCategoryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layoutDirection="rtl"
+        android:onClick="@{itemCategoryViewModel::onItemClick}"
+        android:orientation="horizontal"
+        tools:ignore="UnusedAttribute">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:text="@{itemCategoryViewModel.categoryName}"
+            tools:text="asdds" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:padding="5dp"
+            android:text="@{itemCategoryViewModel.categoryId}"
+            tools:text="asdds" />
+    </LinearLayout>
+</layout>
